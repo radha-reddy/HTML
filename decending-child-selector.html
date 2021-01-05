@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>decendent, child selector-css</title>
+
+		<style>
+		/* decendent selectors -(selector selector)*/
+		
+		ul li{
+		border: 1px solid red;
+		}
+		/* direct child selectors -(selector > selector)*/
+		li > ol{
+		font-size: 30px;
+		}
+		</style>
+		
+
+	</head>
+
+	<body>
+	<ul>
+		<li>
+		<a href="#">Home</a>
+		</li>
+	
+		<li>
+	<a href="#">About</a>
+	</li>
+	
+	<li>
+	<a href="#">services</a>
+	<ol>
+
+		<li><a href=#">web</a></li>
+			<li><a href=#">mobile</a></li>
+				<li><a href=#">cloud</a></li>
+	</ol>
+	</li>
+	
+	<li>
+	<a href="#">Contact</a>
+	</li>
+	
+	</ul>
+
+	</body>
+</html>

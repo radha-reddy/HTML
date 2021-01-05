@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+<head>
+<title>given number is even or odd</title>
+
+	<style>
+	
+
+	</style>
+
+</head>
+
+<body>
+
+	<div>
+	<label>Enter a number </label>
+	<input type="text" name="entnumb" id="Entnumb"/>
+	
+	<div id="Fresult"></div>
+	
+	<button onclick="evenodd()"> Check </button>
+	</div>
+
+<script>
+
+	function evenodd(){
+		
+		var num = document.getElementById('Entnumb').value;
+		if(num % 2 == 0)
+		alert(num + ' : is Even Number');
+		else
+		alert(num + ': is Odd Number' );
+	//document.getElementById('Fresult').innerHtml = result;
+		
+	
+	}
+	
+</script>
+</body>
+</html>
+</body>

@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<head>
+<title>Fibonacci series</title>
+
+	<style>
+
+
+	</style>
+
+</head>
+
+<body>
+
+	
+	<div>
+	<label>Enter a number </label>
+	<input type="text" name="entnumb" id="Entnumb"/>
+	
+	<div id="Fresult"></div>
+	
+	<button onclick="fibonacci()"> Check </button>
+	</div>
+	
+<script>
+	function fibonacci(){
+	
+		var temp1, temp2,num, temp ,result;
+		num = document.getElementById('Entnumb').value;
+		temp = num;
+		temp1 = 0;
+		temp2 =1;
+		
+		console.log(num);
+		for(var i=1; i< num; i++)
+		{	
+		 result = temp1 + temp2;		
+		 document.write(result + '&nbsp');
+		
+		temp1 = temp2;
+		temp2 = result;
+		
+		}
+	}
+	
+	
+</script>
+</body>
+</html>
+</body>

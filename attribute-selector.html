@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+/* Examples for attribute selectors*/
+
+/* 1. Has attribute - [attribute]*/
+[src]
+{
+border : 3px solid red;
+width:250px;
+height: 170px;
+}
+
+/* 2.Attr value equals to -[attrname = 'attrvalue']*/
+
+[src ="images/redtesla.jpg"]{width:100px;}
+
+/* 3.Attr value rvalue starts with - [attrname ^=attrvalue]*/
+
+[alt ^='i']{border-radius:10px;}
+
+/* 4. Attr value rvalue ends with - [attrname $=attrvalue]*/
+
+[alt $='o']{border-radius:50px;}
+
+/* 5. Attr value contains [attr * ='ext']*/
+[src *='images']{
+padding: 10px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<img src="images/redtesla.jpg" alt="red tesla">
+<img src="images/iphone.jpg" alt="iphone">
+<img src="images/bluetesla.jpg" alt="blue tesla">
+<img src="images/teslalogo.jpg" alt="tesla logo">
+<img src="images/siri.jpg" alt="siri">
+</body>
+
+</html>

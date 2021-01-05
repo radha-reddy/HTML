@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forms - HTML</title>
+</head>
+<body>
+<form>
+	<label for="fname"> First Name </label>
+	<input type="text" id="fname" name="fname"/>
+	<br />
+	<br />
+	
+	<label for="lname"> Last Name </label>
+	<input type="text" name="lname" id="lname" />
+	<br />
+	<br />
+	
+	<label for="pwd"> Password </label>
+	<input type="password" name="pwd" id="pwd" />
+	<br />
+	<br />
+	
+	<label for="cpwd"> Confirm Password </label>
+	<input type="password" name="cpwd" id="cpwd" />
+	<br />
+	<br />
+	
+	<!-- <input type="file"  name="resume"/>
+	<br />
+	<br /> -->
+
+	<input type="hidden" name="adhar" value="1233" />	
+	
+	<label>Geneder   </label>
+	<input type="radio" name="gender" id="male" value="male">
+	<label for="male"> Male </label>
+	<input type="radio" name="gender" id="female" value="Female">
+	<label for="female"> Female </label>
+	
+	<br />
+	<br />
+	<label> Skills </label>
+	<input type="checkbox" id=".net" name="skills" value=".net"/> 
+	<label for=".net"> .Net </label>
+	
+	<input type="checkbox" id="java" name="skills" value="java"/> 
+	<label for="java"> Java </label>
+	<input type="checkbox" id="angular" name="skills" value="angular"/> 
+	<label for="angular"> Angular </label>
+	<input type="checkbox" id="react" name="skills" value="react"/> 
+	<label for="react"> react </label>
+	<br />
+	<br />	
+	
+	<label> Country </label>
+	<select>
+	<option value=""> --Select-- </option>
+	<option value="IN" > India </option>
+	<option value="USA"> USA </option>
+	<option value="UK"> UK </option>
+	</select>
+	<br />
+	<br />
+		
+	<input type="submit" name="register" value="Register">
+	<input type="reset" name="reset" Value="Reset">
+	
+
+</form>
+</body>
+</html>

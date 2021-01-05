@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+<head>
+<title> three to eight column layout</title>
+</head>
+<style>
+	.parentcolumnlayout
+	{
+		display:flex;		
+		border: 5px solid Green;
+		padding:20px;
+		margin: 30px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-flow: row wrap;
+		align-content: flex-end;
+		align-items:left;
+		justify-content:left;
+		
+				
+	}
+	.childcolumnlayout
+	{
+		flex:1;
+		border: 2px solid black;
+		margin-right: 10px;
+		align:center;
+		
+		font-size: larger;
+		color: brown;
+	}
+</style>
+<body>
+
+<div class="parentcolumnlayout">
+	<div class="childcolumnlayout">
+	<img src="./images/siri.jpg" />
+	<img src="./images/alexa.jpg" />
+	</div>
+	<div class="childcolumnlayout">column 2 </div>
+	<div class="childcolumnlayout">column 3 </div>
+	<div class="childcolumnlayout">column 4 </div>
+	<div class="childcolumnlayout">column 5 </div>
+	<div class="childcolumnlayout">column 6 </div>
+	<div class="childcolumnlayout">column 7 </div>
+	<div class="childcolumnlayout">column 8 </div>	
+	<div class="childcolumnlayout">column 8 </div>	
+	<div class="childcolumnlayout">column 8 </div>	
+	<div class="childcolumnlayout">column 8 </div>	
+
+</div>
+
+
+
+<div class="parentcolumnlayout">
+	<div class="childcolumnlayout"> column1	</div>
+	<div class="childcolumnlayout">column 2 </div>
+	<div class="childcolumnlayout">column 3 </div>
+	<div class="childcolumnlayout">column 4 </div>
+	</div>
+
+</body>
+
+
+
+</html>

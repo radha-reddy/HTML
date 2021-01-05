@@ -1,0 +1,82 @@
+
+<!Doctype html>
+<html>
+<head>
+<title> Home</title>
+<style>
+.some-page-wrapper {
+  margin: 15px;
+  background-color: red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.orange-column {
+  background-color: orange;
+  height: 100px;
+}
+
+.blue-column {
+  background-color: blue;
+  height: 100px;
+}
+
+.green-column {
+  background-color: green;
+  height: 100px;
+}
+</style>
+
+</head>
+
+
+<div class='some-page-wrapper'>
+  <div class='row'>
+    <div class='column'>
+      <div class='orange-column'>
+        Some Text in Column One
+      </div>
+    </div>
+    <div class='column'>
+      <div class='blue-column'>
+        Some Text in Column Two
+      </div>
+    </div>
+    <div class='column'>
+      <div class='green-column'>
+        Some Text in Column Three
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='column'>
+      <div class='green-column'>
+        Some Text in Row 2, Column One
+      </div>
+    </div>
+    <div class='column'>
+      <div class='orange-column'>
+        Some Text in Row 2, Column Two
+      </div>
+    </div>
+    <div class='column'>
+      <div class='blue-column'>
+        Some Text in Row2, Column Three
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
