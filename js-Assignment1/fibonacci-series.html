@@ -4,8 +4,6 @@
 <title>Fibonacci series</title>
 
 	<style>
-
-
 	</style>
 
 </head>
@@ -25,24 +23,26 @@
 <script>
 	function fibonacci(){
 	
-		var temp1, temp2,num, temp ,result;
+		var f1, f2,num, temp ,result, fibfinalResult='';
 		num = document.getElementById('Entnumb').value;
 		temp = num;
-		temp1 = 0;
-		temp2 =1;
-		
-		console.log(num);
-		for(var i=1; i< num; i++)
+		f1 = 0;
+		f2 =1;
+		fibfinalResult = f1;
+		result = f1 + f2;
+
+		for(var i=1; result < num; i++)
 		{	
-		 result = temp1 + temp2;		
-		 document.write(result + '&nbsp');
-		
-		temp1 = temp2;
-		temp2 = result;
+				
+			fibfinalResult = fibfinalResult + ' ' + result;
+			 document.getElementById("Fresult").innerHTML=fibfinalResult.toString();
+			 
+			f1 = f2;
+			f2 = result;
+			result = f1 + f2;			
 		
 		}
 	}
-	
 	
 </script>
 </body>
