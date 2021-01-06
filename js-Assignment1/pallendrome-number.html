@@ -36,13 +36,15 @@
 		result = result * 10 + rem;		
 	}
 	
-if(result == temp)
-alert(temp + ' : is palindrome');
-else
-alert(temp + ': is not palindrome' );
-	//document.getElementById('Fresult').innerHtml = result;
-		
-	
+// if(result == temp)
+// document.getElementById('Fresult').innerHTML = 'given number is palindrome';
+// else
+// document.getElementById('Fresult').innerHTML = 'given number is palindrome';
+
+result == temp ? 
+document.getElementById('Fresult').innerHTML = 'given number is palindrome':
+document.getElementById('Fresult').innerHTML = 'given number is palindrome'
+
 	}
 	
 </script>

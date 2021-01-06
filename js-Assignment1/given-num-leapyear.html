@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Enter a number</label>
+        <input type="text" name="txt" id="Txt">
+        <button type="button" onclick="getLeapYear()">Check</button>
+        </br>
+
+    </div>
+    <div  style = "color: red;" id="fresult"></div>
+
+
+    <script>
+        function getLeapYear()
+        {
+            var num;
+            num=document.getElementById("Txt").value;
+            console.log(num);
+            if((num % 4 == 0 && num != 100) || (num % 400 == 0))
+                document.getElementById("fresult").innerHTML ="Given number " + num + " is Leap year";
+            else
+                document.getElementById("fresult").innerHTML ="Given number " + num + " is not Leap year";
+
+        }
+
+    </script>
+
+</body>
+</html>
