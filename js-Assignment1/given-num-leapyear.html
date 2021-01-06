@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Given number is leap year</title>
 </head>
 <body>
     <div>
@@ -13,7 +13,7 @@
         </br>
 
     </div>
-    <div  style = "color: red;" id="fresult"></div>
+    <div id="fresult"></div>
 
 
     <script>
@@ -23,9 +23,15 @@
             num=document.getElementById("Txt").value;
             console.log(num);
             if((num % 4 == 0 && num != 100) || (num % 400 == 0))
+            {
                 document.getElementById("fresult").innerHTML ="Given number " + num + " is Leap year";
+                fresult.style["color"] = "green";
+            }
             else
-                document.getElementById("fresult").innerHTML ="Given number " + num + " is not Leap year";
+            {
+                document.getElementById("fresult").innerHTML ="Given number " + num + " is not Leap year" ;
+                fresult.style["color"] = "red";
+            }
 
         }
 
