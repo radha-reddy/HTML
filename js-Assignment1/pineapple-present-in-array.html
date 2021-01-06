@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pineapple is in array ?</title>
+<style>
+    .result{
+        color: brown;
+        font-size: 50px;
+    }
+    
+</style>
+
+</head>
+<body>
+
+    <div>[apple, strawberry, banana, pineapple, grapes]</div>
+    <div>Is pineapple is present in above array? </div>
+    </br>
+    <div class='result'; id='fresult'></div>
+    
+    <script>
+
+        var arr, val, result;
+        val='pineapp1le'
+        arr =['apple', 'strawberry', 'banana', 'pineapple', 'grapes'];
+        result = arr.includes(val);
+        document.getElementById('fresult').innerHTML = result;
+
+    </script>
+    
+</body>
+</html>
