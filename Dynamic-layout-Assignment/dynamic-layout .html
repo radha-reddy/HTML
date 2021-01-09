@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic-layout</title>
-
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <style>
        
        .imgsize{
            height: 70px;
        } 
-       header, .menu, footer, .menusdata{
+       header, .menu, footer, .menusdata, .cards{
            display: flex;
        }
-       .menu li, footer div, .menusdata li{
+       .menu li, footer div, .menusdata li, .cards div{
            flex:1;
        }
        header div{
@@ -58,8 +58,40 @@
        }
        .menusdata li a{
            color:black !important;
-           font-size: 14px;
+           font-size: 13px;
        }
+
+       /*cards Style */
+       .cards{
+           background-color: rgba(95, 94, 94, 0.8);
+           text-align: center;
+           padding-top: 7px;
+       }
+       .card1{
+           
+           padding-right: 15px;        
+            width: 100px;
+            height: 100px;            
+            transition: width 5s;
+       }
+
+       .card1:hover, .card3:hover{
+            background: #053657;  
+            transition: all .5s ease 0s;
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.0);
+            transform: scale(1.1);
+            color: #fff !important;
+       }
+       .card2:hover{
+            background: #df7906;  
+            transition: all .5s ease 0s;
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.0);
+            transform: scale(1.1);
+            color: #fff !important;
+       }
+       
     </style>
 </head>
 <body>
@@ -108,8 +140,19 @@
             </li>
         </ul> -->
     </div>
-    <div id="tabledata"></div>
+    <!-- <div id="tabledata"></div> -->
     
+    <div class='cards'>
+        <div class='card1'>
+            <span>Become a UI Developer</span>
+        </div>
+        <div class='card2'>
+            <span>Become a Angular Developer</span>
+        </div>
+        <div class='card3'>
+            <span>Become a React Js Developer</span>
+        </div>
+    </div>
     <session>
         <footer>
             <!-- <div id='companyInfo'></div> -->
@@ -169,6 +212,8 @@
         </footer>
 
     </session>
+
+     <!--Body layoutcard display code -->
  
     <script>
         // Header starts
@@ -255,67 +300,67 @@
 
         document.getElementById('dplmenudata').innerHTML=htmlmenu;
         
-        //table data
-            var tableData, htmltable;
-            htmltable="";
-            tableData=[
-                {
-                    firstName: 'Radha Reddy',
-                    lastName: 'Timmasamudram',
-                    email: 't.radha7@gmail.com',
-                    phoneNo: '9686617262'
-                },
-                {
-                    firstName: 'Jyothi',
-                    lastName: 'Reddy',
-                    email: 'jyo@gmail.com',
-                    phoneNo: '999999999'
-                },                
-                {
-                    firstName: 'Radha Reddy',
-                    lastName: 'Timmasamudram',
-                    email: 't.radha7@gmail.com',
-                    phoneNo: '9686617262'
-                },
-                {
-                    firstName: 'Roopalatha',
-                    lastName: 'Reddy',
-                    email: 'roopa@gmail.com',
-                    phoneNo: '666667666'
-                },
-                {
-                    firstName: 'Isha',
-                    lastName: 'Girisha',
-                    email: 'isha@gmail.com',
-                    phoneNo: '77777777'
-                },
-                {
-                    firstName: 'Radha Reddy',
-                    lastName: 'Timmasamudram',
-                    email: 't.radha7@gmail.com',
-                    phoneNo: '9686617262'
-                },
-            ];
+        // //table data
+        //     var tableData, htmltable;
+        //     htmltable="";
+        //     tableData=[
+        //         {
+        //             firstName: 'Radha Reddy',
+        //             lastName: 'Timmasamudram',
+        //             email: 't.radha7@gmail.com',
+        //             phoneNo: '9686617262'
+        //         },
+        //         {
+        //             firstName: 'Jyothi',
+        //             lastName: 'Reddy',
+        //             email: 'jyo@gmail.com',
+        //             phoneNo: '999999999'
+        //         },                
+        //         {
+        //             firstName: 'Radha Reddy',
+        //             lastName: 'Timmasamudram',
+        //             email: 't.radha7@gmail.com',
+        //             phoneNo: '9686617262'
+        //         },
+        //         {
+        //             firstName: 'Roopalatha',
+        //             lastName: 'Reddy',
+        //             email: 'roopa@gmail.com',
+        //             phoneNo: '666667666'
+        //         },
+        //         {
+        //             firstName: 'Isha',
+        //             lastName: 'Girisha',
+        //             email: 'isha@gmail.com',
+        //             phoneNo: '77777777'
+        //         },
+        //         {
+        //             firstName: 'Radha Reddy',
+        //             lastName: 'Timmasamudram',
+        //             email: 't.radha7@gmail.com',
+        //             phoneNo: '9686617262'
+        //         },
+        //     ];
 
-            htmltable +=`<table>
-                         <tr>
-                            <th>First Name</th>
-                            <th>last Name</th>
-                            <th>Email Name</th>
-                            <th>Phone Number</th>
-                         </tr>`;
-            for(let i=0; i<tableData.length; i++){
-                    htmltable +=`<tr>
-                                    <td>${tableData[i].firstName}</td>
-                                    <td>${tableData[i].lastName}</td>
-                                    <td>${tableData[i].email}</td>
-                                    <td>${tableData[i].phoneNo}</td>
-                                </tr>`;
-            }
-            htmltable +=`</table>`;
-            console.log(htmltable);
-            document.getElementById('tabledata').innerHTML=htmltable;
-            document.querySelector('tr:first-child').style.backgroundColor='lightyellowwerd';
+        //     htmltable +=`<table>
+        //                  <tr>
+        //                     <th>First Name</th>
+        //                     <th>last Name</th>
+        //                     <th>Email Name</th>
+        //                     <th>Phone Number</th>
+        //                  </tr>`;
+        //     for(let i=0; i<tableData.length; i++){
+        //             htmltable +=`<tr>
+        //                             <td>${tableData[i].firstName}</td>
+        //                             <td>${tableData[i].lastName}</td>
+        //                             <td>${tableData[i].email}</td>
+        //                             <td>${tableData[i].phoneNo}</td>
+        //                         </tr>`;
+        //     }
+        //     htmltable +=`</table>`;
+        //     console.log(htmltable);
+        //     document.getElementById('tabledata').innerHTML=htmltable;
+        //     document.querySelector('tr:first-child').style.backgroundColor='lightyellowwerd';
 
             //Footer code 
 
