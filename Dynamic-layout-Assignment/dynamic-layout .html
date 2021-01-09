@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic-layout</title>
+
+    <style>
+       
+       .imgsize{
+           height: 70px;
+       } 
+       header, .menu, footer, .menusdata{
+           display: flex;
+       }
+       .menu li, footer div, .menusdata li{
+           flex:1;
+       }
+       header div{
+           flex:2 ;
+       }
+       header .menu{
+           flex:1;
+       }
+       ul li{
+           list-style: none;  
+           padding:5px;         
+       }
+       ul li a{
+           text-decoration: none;
+           color: white;
+           
+       }
+
+       table{
+           font-family: arial, sans-serif;
+           width: 100%;
+           border-collapse: collapse;
+           
+       }
+       th, td{
+           border: 1px solid rgba(95, 94, 94, 0.8);
+           padding: 8px;
+           text-align: left;
+       }
+       tr:nth-child(even){
+           background-color: lightslategray;
+       }
+
+       /*Footer Style*/
+
+       footer, header{
+           background-color: black;
+           color: white;
+       }
+       footer{
+           font-size: 17px;
+       }
+       .menusdata li a{
+           color:black !important;
+           font-size: 14px;
+       }
+    </style>
+</head>
+<body>
+
+    <section>
+        <header>
+            <!-- <div>
+                <img class="imgsize" src="../images/apple.jpg" alt="apple logo">
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href=#>Home</a>
+                </li>
+                <li>
+                    <a href=#>Services</a>
+                </li>
+                <li>
+                    <a href=#>Products</a>
+                </li>
+                <li>
+                    <a href=#>About</a>
+                </li>
+                <li>
+                    <a href=#>Contact</a>
+                </li>
+            </ul> -->
+        </header>
+    </section>
+
+    <div id="dplmenudata">
+        <!-- <ul class="menusdata">
+            <li>
+                <a href=#>Home</a>
+            </li>
+            <li>
+                <a href=#>Services</a>
+            </li>
+            <li>
+                <a href=#>Products</a>
+            </li>
+            <li>
+                <a href=#>About</a>
+            </li>
+            <li>
+                <a href=#>Contact</a>
+            </li>
+        </ul> -->
+    </div>
+    <div id="tabledata"></div>
+    
+    <session>
+        <footer>
+            <!-- <div id='companyInfo'></div> -->
+            <!-- <div>
+                <div>
+                    <img  class='imgsize' src='../images/apple.jpg' alt='footer logo'>
+                </div>
+                <div>
+                    <p>AchieversIT - provides a wide group of opportunities for freshers and Experienced candidate who can develop their skills and build their career opportunities across multiple Companies.</p>
+                </div>
+
+            </div> -->
+            <!-- <div><h4>COMPANY</h4>
+            <ul class="compdetails">
+                <li>
+                    <a href=#>Home</a>
+                </li>                
+                <li>
+                    <a href=#>Placements</a>
+                </li>
+                <li>
+                    <a href=#>Corporate Training</a>
+                </li>
+                <li>
+                    <a href=#>Contact Us</a>
+                </li>                               
+            </ul>
+            </div> -->
+            <!-- <div>
+                <h4>TRENDING COURSES</h4>
+                <ul class="trendCourses">
+                    <li>
+                        <a href=#>UI Development Course</a>
+                    </li>                
+                    <li>
+                        <a href=#>Angular JS Course</a>
+                    </li>
+                    <li>
+                        <a href=#>React JS Course </a>
+                    </li>
+                    <li>
+                        <a href=#>Digital Marketing Course</a>
+                    </li>                               
+                </ul>
+            </div> -->
+            <!-- <div>
+                <h4>CONTACT INFO</h4>
+                <ul class="contactinfo">
+                    <li>
+                       <span> #272, 6th Main, Next to Preksha Montessori , 1st Floor, BTM 2nd Stage, Bangalore, India - 560076</span>
+                    </li>                
+                    <li>
+                    <span>India : +91 8431-040-457</span>
+                    </li>                                                
+                </ul>
+            </div> -->
+        </footer>
+
+    </session>
+ 
+    <script>
+        // Header starts
+        var htmlHeader, headerData;
+        htmlHeader="";
+        headerData=[
+            {
+                menu_logo:"AIT-white.jpg"
+            },
+            {
+                menu_name:"Corporate Training"
+            },
+            {
+                menu_name:"Placements Page"
+            }
+        ];
+
+        
+        htmlHeader += `<div>
+                <img class="imgsize" src="../images/${headerData[0].menu_logo}" alt="apple logo">
+                </div>
+                <ul class="menu">`;
+
+        for(let i=1; i< headerData.length; i++){
+                    htmlHeader += `<li>
+                    <a href=#>${headerData[i].menu_name} </a>
+                    </li>`;
+            }
+            htmlHeader+= `</ul>`;
+            console.log(htmlHeader);
+            document.getElementsByTagName("header")[0].innerHTML=htmlHeader;
+
+            //body starts
+            //menu bar
+        var menusData, htmlmenu;
+        htmlmenu='';
+        menusData=[            
+            {
+                menu_name:"Courses"
+            },
+            {
+                menu_name:"UI Development"
+            },
+            {
+                menu_name:"Angular"
+            },
+            {
+                menu_name:"React Js"
+            },
+            {
+                menu_name:"VUE JS"
+            },
+            {
+                menu_name:"MEAN"
+            },
+            {
+                menu_name:"MERN"
+            },
+            {
+                menu_name:"Digital Marketing"
+            },
+            {
+                menu_name:"Python"
+            },
+            {
+                menu_name:"IONIC"
+            },
+            {
+                menu_name:"React Nativ"
+            },
+            {
+                menu_name:"WEB DEV"
+            }
+
+        ];
+
+        htmlmenu +=`<ul class="menusdata">`;
+        for(let i=0;i<menusData.length; i++){
+            htmlmenu +=`<li>
+                <a href=#>${menusData[i].menu_name}</a>
+            </li>`;
+        }
+        htmlmenu +=`</ul>`;
+
+        document.getElementById('dplmenudata').innerHTML=htmlmenu;
+        
+        //table data
+            var tableData, htmltable;
+            htmltable="";
+            tableData=[
+                {
+                    firstName: 'Radha Reddy',
+                    lastName: 'Timmasamudram',
+                    email: 't.radha7@gmail.com',
+                    phoneNo: '9686617262'
+                },
+                {
+                    firstName: 'Jyothi',
+                    lastName: 'Reddy',
+                    email: 'jyo@gmail.com',
+                    phoneNo: '999999999'
+                },                
+                {
+                    firstName: 'Radha Reddy',
+                    lastName: 'Timmasamudram',
+                    email: 't.radha7@gmail.com',
+                    phoneNo: '9686617262'
+                },
+                {
+                    firstName: 'Roopalatha',
+                    lastName: 'Reddy',
+                    email: 'roopa@gmail.com',
+                    phoneNo: '666667666'
+                },
+                {
+                    firstName: 'Isha',
+                    lastName: 'Girisha',
+                    email: 'isha@gmail.com',
+                    phoneNo: '77777777'
+                },
+                {
+                    firstName: 'Radha Reddy',
+                    lastName: 'Timmasamudram',
+                    email: 't.radha7@gmail.com',
+                    phoneNo: '9686617262'
+                },
+            ];
+
+            htmltable +=`<table>
+                         <tr>
+                            <th>First Name</th>
+                            <th>last Name</th>
+                            <th>Email Name</th>
+                            <th>Phone Number</th>
+                         </tr>`;
+            for(let i=0; i<tableData.length; i++){
+                    htmltable +=`<tr>
+                                    <td>${tableData[i].firstName}</td>
+                                    <td>${tableData[i].lastName}</td>
+                                    <td>${tableData[i].email}</td>
+                                    <td>${tableData[i].phoneNo}</td>
+                                </tr>`;
+            }
+            htmltable +=`</table>`;
+            console.log(htmltable);
+            document.getElementById('tabledata').innerHTML=htmltable;
+            document.querySelector('tr:first-child').style.backgroundColor='lightyellowwerd';
+
+            //Footer code 
+
+            var htmlFooter, compInfo, compDetails, trendingCourses, contactInfo;
+            htmlFooter ='';
+            compInfo =[
+                {
+                    comp_logo: 'AIT-white.jpg'
+                },
+                {
+                    comp_info:'AchieversIT - provides a wide group of opportunities for freshers and Experienced candidate who can develop their skills and build their career opportunities across multiple Companies.'
+                }
+            ];
+
+            compDetails =[
+                {
+                comp_details: 'Home'
+                },
+                {
+                comp_details: 'Placements'
+                },
+                {
+                comp_details: 'Corporate Training'
+                },
+                {
+                comp_details: 'CONTACT US'
+                }
+            ];
+            
+            trendingCourses = [
+
+                {
+                    course_name : 'UI Development Course'
+                },
+                {
+                    course_name : 'Angular JS Course'
+                },
+                {
+                    course_name : 'React JS Course'
+                },
+                {
+                    course_name : 'Digital Marketing Course'
+                }
+            ];
+
+            contactInfo = [
+                {
+                    adress_info : '#272, 6th Main, Next to Preksha Montessori , 1st Floor, BTM 2nd Stage, Bangalore, India - 560076'
+                },
+                {
+                    phone_info : 'India : +91 8431-040-457'
+                }
+
+            ];
+
+                console.log(compInfo);
+            htmlFooter += `<div>
+                            <div>
+                                <img  class='imgsize' src='../images/${compInfo[0].comp_logo}' alt='footer logo'>
+                             </div>
+                            <div>
+                                 <p>${compInfo[1].comp_info}</p>
+                             </div>
+                        </div>`;
+                console.log(htmlFooter);
+
+            htmlFooter +=` <div><h4>COMPANY</h4>
+                                <ul class="compdetails">`;
+                                    
+            for(let i=0;i<compDetails.length; i++){
+                htmlFooter += `<li>
+                                   <a href=#>${compDetails[i].comp_details}</a>
+                                </li> `;
+            }      
+            
+            htmlFooter += `</ul>
+                        </div>`;
+            
+            
+            //trending courses code
+
+            htmlFooter+=`<div>
+                            <h4>TRENDING COURSES</h4>
+                            <ul class="trendCourses">`;
+
+            for(let i=0;i<trendingCourses.length; i++){
+                        htmlFooter+=`<li>
+                             <a href=#>${trendingCourses[i].course_name}</a>
+                            </li>`       
+            }       
+                       
+            htmlFooter +=`</ul>
+                         </div>`;
+                         console.log(htmlFooter);
+
+            //contact info code
+            console.log(contactInfo);
+            htmlFooter += `<div>
+                <h4>CONTACT INFO</h4>
+                <ul class="contactinfo">
+                    <li>
+                        <span>${contactInfo[0].adress_info}</span>
+                    </li>   
+                    <li>
+                        <span>${contactInfo[1].phone_info}</span>
+                    </li>          
+                </ul>
+            </div>`;
+            //document.getElementById('companyInfo').innerHTML =htmlFooter;
+            document.getElementsByTagName('footer')[0].innerHTML=htmlFooter;
+
+
+            
+    </script>
+</body>
+</html>
