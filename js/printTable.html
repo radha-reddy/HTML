@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print a table</title>
+</head>
+<body>
+    <div id='htmlinput'></div>
+
+    <div id='fResult'></div>
+    
+    <script>
+
+        document.getElementById('htmlinput').innerHTML = `
+    <label>Enter a Number</label>
+    <input type=text name='txtNum' id='num'>
+    <input type="submit" name='btnSubmit' onclick="generateTable()">`
+      function generateTable()
+      {
+        var tableNum = document.getElementById('num').value;
+        var htmlResult = '';
+
+        for(let i=1; i<=10; i++)
+        {
+          //  4 * 1 = 4
+          let culculation = tableNum * i;
+          htmlResult +=tableNum + '*' + i + '=' + culculation + '</br>';
+
+        }
+
+        document.getElementById('fResult').innerHTML = htmlResult;
+
+      }
+
+    </script>
+</body>
+</html>
