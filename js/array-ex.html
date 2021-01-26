@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-exmaple</title>
+</head>
+<body>
+   
+    
+    <h4>Array methods</h4>
+
+    <div id='car'></div> <br>
+
+    <input type='submit' onclick="arrayMethods()">
+
+    <script>
+
+        // Method 1:
+        function arrayMethods(){
+        var Cars =[];
+        Cars =['Porsche','ferrari','Tesla'];
+        Cars[2]='rolls royce';
+        Cars[1] = 'lamborghini';
+        var finalResult = document.getElementById('car').innerHTML;
+            document.getElementById('car').innerHTML = Cars;
+
+
+             //Method 2:
+
+        var CarModels = new Array('volvo','jeep','infinity','audi','toyota','honda');
+        //CarModels =['volvo','ferrari','Tesla'];
+        document.getElementById('car').innerHTML = CarModels;
+
+        // concat()
+
+        var allCars= Cars.concat(CarModels);
+        document.getElementById('car').innerHTML = allCars;
+
+        // CopyWithin()
+
+        var CopyWithinResult = CarModels.copyWithin(2,0);
+
+        document.getElementById('car').innerHTML = CopyWithinResult;
+
+
+        //fill()
+
+        var libRack1 =['Angular Book','HTML Book','ReactJs Book'];
+         
+        var fillResult = libRack1.fill('VueJs Book');
+        document.getElementById('car').innerHTML = libRack1;
+
+        //every()
+
+        var age =[16,14,20,25,26,40];
+
+        function adultAge(age){
+
+            return age >=18
+
+        }         
+
+        var everyResult = age.every(adultAge);
+
+        document.getElementById('car').innerHTML = everyResult;
+
+        // filter() 
+
+        var filterResult = age.filter(adultAge);
+        document.getElementById('car').innerHTML = filterResult;
+
+        // find()
+
+        var findResult = age.find(adultAge);
+        document.getElementById('car').innerHTML = findResult;
+
+        //findIndex()
+
+        var findindexResult = age.findIndex(adultAge);
+        document.getElementById('car').innerHTML = findindexResult;
+
+
+        //foreach()
+
+        var num = [5,10,30,55]; // num[0] = 5, num[1] = 10 ....
+        var sum =0;
+
+        for(let i=0; i<num.length; i++){
+
+            sum += num[i];
+            
+        }
+
+        document.getElementById('car').innerHTML = sum;
+
+
+        var foreachResult = 0;
+        num.forEach(addition);
+
+        function addition(item) {
+
+             foreachResult +=item;
+            
+            }
+
+        document.getElementById('car').innerHTML = 'foreach:  ' + foreachResult;
+
+
+        // includes()
+
+        var fruits =['Blue berrys','Avacados','Ras berrys','kiwi'];
+        var includesResult = fruits.includes('Avacados');
+        document.getElementById('car').innerHTML = 'includes:  ' + includesResult;
+
+        // isArray()
+
+        var isArrayResult = Array.isArray(fruits);
+
+        document.getElementById('car').innerHTML =isArrayResult
+
+
+        //join()
+
+        var joinResult = fruits.join();
+
+        document.getElementById('car').innerHTML =joinResult;
+
+        // alert(typeof(fruits));
+        // alert(typeof(joinResult));
+
+
+        //push()
+
+        var pushresult = fruits.push('straw berries');
+        //alert('length:' + pushresult);
+
+        document.getElementById('car').innerHTML =fruits;
+
+        // pop()
+
+        var popResult = fruits.pop();
+        //alert(popResult);
+        document.getElementById('car').innerHTML =fruits;
+
+        //shift()
+        var employeeNames = ['Rob','shiva','pallavi','anshu']
+        var shiftResult = employeeNames.shift();
+       
+        //alert(shiftResult);
+        document.getElementById('car').innerHTML =employeeNames;
+
+        //unshift()
+
+        var unshiftResult = employeeNames.unshift('jyothi','pavani');
+        //alert(unshiftResult);
+        document.getElementById('car').innerHTML =employeeNames;
+
+
+        //reverse()
+
+        var reverseResult = employeeNames.reverse();
+        document.getElementById('car').innerHTML =reverseResult;
+
+        // slice()
+
+        var employees = ['Rob','shiva','pallavi','anshu'];
+
+        var sliceResult = employees.slice(1,3);
+
+        document.getElementById('car').innerHTML =sliceResult;
+
+        //splice()
+        var products = ['apple','samsung','oppo','google'];
+        var spliceResult = products.splice(2,0,"moto","oneplus");
+        //spliceResult = products.splice(2,2);
+        //alert(spliceResult);
+
+        document.getElementById('car').innerHTML =products  ;
+
+        //sort()
+
+        var sortResult = products.sort();
+
+
+        document.getElementById('car').innerHTML = sortResult.reverse();
+
+        //tostring()
+
+        //alert(typeof(products.toString()));
+        document.getElementById('car').innerHTML = products.toString();
+
+        //map()
+
+        var suarerootof = [4,9,16,25];
+        document.getElementById('car').innerHTML = suarerootof.map(Math.sqrt);
+
+        
+
+                
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        }
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

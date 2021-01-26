@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+<!-- 
+  String Methods
+  
+            - toLowerCase()
+            - toUpperCase()
+            - concat()
+            - charAt()                                
+            - indexOf()
+            - lastIndexOf()
+            - match(reg)
+            - replace()
+            - search()
+            - slice()
+            - split()            
+            - substring()   
+            -startsWith()
+            -trim()
+                    
+
+-->   
+
+<label for='fName'>First Name</label>
+<input type='text' name='fName' id='fName'> <br><br>
+
+<label for='lName'>lastIndexOf Name</label>
+<input type='text' name='lName' id='lName'> <br><br>
+
+<input type ="submit" onclick='concat()'>
+
+<p id='tolower'></p>
+
+
+</body>
+<script>
+
+    var firstName = document.getElementById('fName').value;
+    var lastName = document.getElementById('lName').value;
+    
+    document.getElementById('tolower').innerHTML = firstName.toLowerCase();
+    firstName = 'radha thimmasamudram';
+    lastName = 'pavani';
+    // alert(firstName.toLowerCase());
+    // alert(lastName.toUpperCase());
+    // alert(firstName.concat(lastName));
+    // alert(firstName.charAt(5));
+    var str = 'welcome to the java 9script in scripting worlD'
+    //alert(str.indexOf('java'));
+    //alert(str.lastIndexOf('java'));
+   // alert(str.match(/scr/g));
+    //alert(str.match(/[A-E]/g));
+
+    var fullname = 'Radha thimmasamudram';
+    //alert(fullname.replace(/thimmasamudram/g, 'Achanta'));
+
+    //alert(str.search('java'));
+
+    var str1 = "Hello javascript";
+    //alert(str1.slice(0));
+    var str2 ="how 6 you today";
+    //alert(str2.split(" "));
+    //alert(str2.split(" ", 3));
+    //alert(str2.split("6"));
+    //alert(str2.substring(1,5));   
+    
+    //alert(str2.substring(3));
+
+    alert(str1.startsWith('Hello'));
+
+    var str3 = "   hello";
+    alert(str3.length);
+    alert(str3);
+    alert(str3.trim().length);
+   function concat()
+   {
+
+    document.getElementById('tolower').innerHTML ='hello' +str3;
+
+   }
+
+
+
+   
+
+
+    
+
+</script>
+</html>

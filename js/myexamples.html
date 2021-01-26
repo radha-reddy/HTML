@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span >My total value is :</span>
+    <div id='total'></div>    
+
+
+    <script>
+     var num1, num2, total;  // declaration part
+
+     num1 = 5; // intialization
+     num2 = 3;
+    // identifiers/ variables -- num1, num2, total
+
+   total = num1 + num2;
+   document.write(' Write Total value is: ' + total);
+
+   console.log(' console- Total value is: ' + total);
+
+   alert(' Write Total value is: ' + total);
+
+   document.getElementById('total').innerHTML = total;
+    /* 
+    display syntax for output
+    1. document.write
+    2.console.log
+    3. window.alert
+    4. innerHtml
+    */
+
+
+   var a = 5, b = 3;
+
+   if(a == b) 
+   {
+        alert('both are equl');
+   }
+   else{
+       alert('both are not equal');
+
+   }
+
+
+   var queue=['radha','jyothi','isha','roopa','siva','pallavi'];
+   for(let i=0; i<=queue.length; i++ )
+   {
+       if(queue[i] === 'siva')
+       {
+           console.log(queue[i] + ' is present');
+       }
+
+   }
+
+   for(let i=queue.length; i >=0; i--)
+   {
+       if(queue[i] == 'pallavi')
+       {
+           console.log(queue[i] + ' is present');
+       }
+   }
+
+   var name='radha';
+   var revname='';
+   console.log(name.length);
+      for(let i=name.length-1; i>=0; i--)
+   {     
+    revname += name[i];          
+   }
+   console.log(revname);
+
+   var empdetails;
+   empdetails = [
+       
+   {
+       name:'radha',
+       id:'123',
+       email:'abc@gmail.com'
+
+   },
+   {
+       name:'jyo',
+       id:'123',
+       email:'abc@gmail.com'
+
+   },
+   {
+       name:'isha',
+       id:'123',
+       email:'abc@gmail.com'
+
+   }
+    ];
+
+    for(let i=0;i<empdetails.length; i++)
+    {
+        
+    }
+
+
+console.log(empdetails);
+
+    </script>
+    
+</body>
+</html>

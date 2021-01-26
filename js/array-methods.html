@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+
+    <h2>Array Methods</h2>
+
+    <div id='fResult'>
+
+    </div> <br><br>
+
+    <input type="submit" onclick="arraymethod()">
+
+
+    <script>
+
+        function arraymethod(){
+            
+        
+        // What is array?
+
+        var house1 = '1bhk';
+        var house2 = '2bhk';
+        var house1cost= 2500;
+
+        var arr = ['1BHK','2BHK',2500,3500];
+
+        // method 1
+
+        var arr1=[];
+
+        var arra2 = new Array(); // 2nd method 
+
+        arr1[0] ='1bhk';
+        arr1[1] ='2bhk';
+        arr1[2] = 2500;
+
+         document.getElementById('fResult').innerHTML =arr1;
+
+
+         // concat()
+
+         var carmodel1 =['porche','lamborghini','infinity'];
+         var carmodel2 =['rols royce', 'tesla'];
+
+         document.getElementById('fResult').innerHTML = carmodel1.concat(carmodel2);
+
+         // copywithin()
+
+         var copywithResult = carmodel1.copyWithin(2,1);
+         document.getElementById('fResult').innerHTML = copywithResult;
+
+         // fill()
+
+          var fillResult = carmodel2.fill('Toyota');
+
+          document.getElementById('fResult').innerHTML =fillResult;
+
+          // every()
+
+          var age=[10,26,11,35];
+
+          function adultAge(age) {
+              return age >= 18
+              
+          }
+
+          var everyresult = age.every(adultAge);
+          document.getElementById('fResult').innerHTML = everyresult;
+
+          //Some()
+
+          var someResult = age.some(adultAge);
+
+          document.getElementById('fResult').innerHTML = someResult;
+
+
+          //filter()
+
+          var filterResult = age.filter(adultAge);
+
+          document.getElementById('fResult').innerHTML = filterResult;
+
+          //find()
+
+          var findResult = age.find(adultAge);
+          document.getElementById('fResult').innerHTML = findResult;
+
+          //findIndex()
+          var ages=[10,16,11,35];
+          var findIndexResult = ages.findIndex(adultAge);
+          document.getElementById('fResult').innerHTML = findIndexResult;
+
+          //foreach
+
+
+          var sum =0;
+          var num = [5,10,30,55]; // num[0] =5, num[1] = 10, ....
+
+          for(let i=0; i<num.length; i++)
+          {
+
+            sum += num[i] ;   
+          }
+
+          var foreachResult =0;
+
+          num.forEach(Addition);
+          function Addition(item){
+            foreachResult += item; 
+
+          }
+
+          document.getElementById('fResult').innerHTML = foreachResult;
+
+          //includes()
+
+          var fruits= ['Blue berries','Avacados','strawberries'];
+
+          var includesResult = fruits.includes('grapes');
+
+          document.getElementById('fResult').innerHTML = includesResult;
+
+
+          // isArray()
+          var val ='';
+          var isArrayResult = Array.isArray(val);
+          
+
+          document.getElementById('fResult').innerHTML = isArrayResult;
+
+
+          //join()
+
+          var books=['book1','book2'];
+          //var library=['book3','book4'];
+
+          var joinResult = books.join();
+
+          document.getElementById('fResult').innerHTML = joinResult;
+          //alert(typeof(joinResult));
+
+
+          //push()
+          books[2]='book3';
+          document.getElementById('fResult').innerHTML = books;
+          var pushresult = books.push('book4');
+          //alert(pushresult);
+          document.getElementById('fResult').innerHTML = books;
+
+
+          //pop();
+
+          var popResult = books.pop();
+          //alert(popResult);
+
+          document.getElementById('fResult').innerHTML = books;
+
+
+          //shift()
+
+          var products = ['apple','samsug','moto'];
+
+          var shiftResult = products.shift();
+          //alert(shiftResult);
+
+          document.getElementById('fResult').innerHTML = products;
+
+          //unshift()
+
+          var unshiftresult = products.unshift('oneplus','apple');
+          document.getElementById('fResult').innerHTML = products;
+
+          //reverse()
+
+          document.getElementById('fResult').innerHTML = products.reverse();
+
+          //slice()
+          var products1 = ['apple','samsug','moto','google'];
+
+          var sliceResult = products1.slice(1,3);
+
+          document.getElementById('fResult').innerHTML = sliceResult;
+
+          //splice()
+
+          var products2 = ['apple','samsug','moto','google'];
+          var spliceResult = products2.splice(1,1,'oppo');
+         // alert(spliceResult);
+          document.getElementById('fResult').innerHTML= products2;
+
+          //sort()
+
+          var products3 = ['apple','samsug','moto','google'];
+
+          document.getElementById('fResult').innerHTML= products3.sort().reverse();
+
+
+          //tostring()
+          alert(typeof(products3));
+          document.getElementById('fResult').innerHTML= products3;
+          alert(typeof(products3.toString()));
+
+
+          //map()
+
+          var mapResult;
+          var squareroot =[4,9,16,25];
+
+          document.getElementById('fResult').innerHTML= squareroot.map(Math.sqrt);
+
+          
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
